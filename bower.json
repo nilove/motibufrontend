@@ -1,0 +1,43 @@
+{
+  "name": "motibu-head",
+  "version": "0.0.1",
+  "description": "motibu SaaS client front-end on Laravel",
+  "keywords": [
+    "motibu",
+    "head"
+  ],
+  "authors": [
+    "Shifat Adnan",
+    "Joy Nag"
+  ],
+  "license": "Proprietary",
+  "homepage": "motibu.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.3.6",
+    "angular-animate": "~1.3.6",
+    "angular-cookies": "~1.3.6",
+    "angular-resource": "~1.3.6",
+    "angular-route": "~1.3.6",
+    "angular-sanitize": "~1.3.6",
+    "angular-ui": "~0.4.0",
+    "angular-bootstrap": "~0.12.0",
+    "components-font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.1",
+    "angular-ui-select": "~0.9.5",
+    "angular-bootstrap-slider": "~0.0.8",
+    "angular-notify": "~2.0.2",
+    "angular-moment": "0.9.0"
+  },
+  "resolutions": {
+    "angular": "~1.3.6"
+  }
+}

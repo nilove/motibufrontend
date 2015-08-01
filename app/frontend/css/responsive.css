@@ -1,0 +1,63 @@
+/* Medium to Mobile - MD to XS */
+/* ------------------------------------------------------ */
+
+@media (max-width: 1199px) {
+
+}
+
+
+
+/* Medium - MD */
+/* ------------------------------------------------------ */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+
+/* Small to Mobile - SM to XS */
+/* ------------------------------------------------------ */
+
+@media (max-width: 991px) {
+
+}
+
+
+
+/* Small - SM */
+/* ------------------------------------------------------ */
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+}
+
+
+
+/* Mobile - XS */
+/* ------------------------------------------------------ */
+
+@media (max-width: 767px) {
+
+}
+
+
+
+/* Small Mobile - XXS */
+/* ------------------------------------------------------ */
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 520px) {
+  .page-content .agents-details .col-xs-6 {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .agents-details .agent-single {
+    width: 275px;
+  }
+}

@@ -1,0 +1,118 @@
+<?php $__env->startSection('content'); ?>
+<div class="container" ng-controller="ShowJobsController">
+  <div class="page-content mt30">
+
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="client-applicants-tab">
+          <li class="" ng-repeat="job in jobs">
+            <div ng-click="setJob(job)">
+              {{job.title}}
+              <span class="publish-dae-id">
+                Published: 10 nov 2014 <b>|</b> job ID: {{job.id}}
+              </span>
+              <span class="location">
+                <i class="fa fa-map-marker"></i>
+               {{job.location}}
+
+              </span>
+            </div>
+          </li>
+        </ul>
+
+      </div> <!-- end .3rd grid layout -->
+      <div class="col-md-9">
+        <div class="tab-content client-team">
+          <div class="tab-pane active" id="quality-engineer">
+
+            <div class="view-sort clearfix mb30">
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <h4 class="available-jb pull-left">{{job.title}}</span></h4>
+
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="job-sort-by pull-right ml20" id="clients-sort-by">
+
+                    <div class=""><select>
+                      <option value="#">Sort by</option>
+                      <option value="#">Name</option>
+                      <option value="#">Type</option>
+                      <option value="#">Date</option>
+                    </select>
+
+                  </div> <!-- end .job-sort-by -->
+
+                  
+
+                </div> <!-- end .end col-sm-5 grid-layout  -->
+              </div> <!-- end .row -->
+            </div> <!-- end .view-sort div -->
+
+            <div class="candidate-description client-description applicants-content mt20" ng-repeat="candidate in candidates">
+            
+              <div class="language-print client-des clearfix">
+                <div class="aplicants-pic pull-left">
+                  <img ng-src="{{candidate.profile_pic || 'img/content/aplicant-img-1.jpg'}}" alt="">
+
+                  
+                </div>
+                <!-- end .aplicants-pic -->
+                <div class="clearfix">
+                  <div class="pull-left">
+                    <h5>{{candidate.name}} <a href="#/candidate/{{candidate.candidate_id}}/profile"> [profile]</a></h5>
+                    
+                  </div>
+                  <!--<ul class="list-inline pull-right">
+                    <li class="star-rating">7.9</li>
+                  </ul>-->
+
+                </div>
+
+                <div class="aplicant-details-show clearfix">
+                  <ul class="list-unstyled pull-left">
+                      <li><span>Location: <b class="aplicant-detail">{{candidate.location}}</b></span></li>
+
+                      <li><span>Nationality: <b class="aplicant-detail">{{candidate.nationality}}</b></span></li>
+                      <li><span>Years of Experience: <b class="aplicant-detail">{{candidate.years_of_experience}}</b></span></li>
+
+                      <li><span>Degree: <b class="aplicant-detail">MBA</b></span></li>
+                    </ul>
+
+                    <ul class="list-unstyled pull-left">
+                      <li>
+                        <span>Employment Status: <b class="aplicant-detail">Employed</b></span>
+                      </li>
+
+                      <li>
+                        <span>Gender: <b class="aplicant-detail">Male</b></span>
+                      </li>
+
+                      <li>
+                        <span>Work Permit: <b class="aplicant-detail">General Work Permit</b></span>
+                      </li>
+                    </ul>
+
+                </div>
+                <!-- end .aplicant-details-show -->
+              </div> <!-- end .language-print -->
+
+            </div> <!-- end .candidate-description -->
+
+            <div ng-if="job.id && !candidates.length"><h1>No candidates found.</h1></div>
+            <div ng-if="!job.id"><h3>Please select a job from the left bar.</h3></div>
+
+          </div> 
+           
+
+        </div> <!-- end client-team tab-content -->
+
+      </div> <!-- end .9th grid layout -->
+
+    </div>
+  </div> <!-- end .page-content -->
+</div> <!-- end container -->
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.partial', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
